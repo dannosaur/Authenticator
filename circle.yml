@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: fedora:latest
+      - image: fedora:rawhide
     working_directory: ~/Authenticator
     steps:
       - run: dnf -y install flatpak flatpak-builder
