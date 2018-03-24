@@ -5,9 +5,6 @@ jobs:
       - image: fedora:latest
     working_directory: ~/Authenticator
     steps:
-      - run: >
-          dnf -y install
-            flatpak
-            flatpak-builder
+      - run: dnf -y install flatpak flatpak-builder
       - checkout
       - run: flatpak-builder install com.github.bilelmoussaoui.Authenticator.json --force-clean
