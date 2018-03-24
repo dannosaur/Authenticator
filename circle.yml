@@ -6,8 +6,8 @@ jobs:
     working_directory: ~/Authenticator
     steps:
       - run: >
-        dnf -y install
-          flatpak
-          flatpak-builder
+          dnf -y install
+            flatpak
+            flatpak-builder
       - checkout
       - run: flatpak-builder install com.github.bilelmoussaoui.Authenticator.json --force-clean
