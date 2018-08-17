@@ -7,6 +7,6 @@ jobs:
     steps:
       - run:
           name: Install dependencies
-          command: dnf -y install flatpak flatpak-builder
+          command: dnf -y install flatpak flatpak-builder iputils
       - checkout
       - run: flatpak-builder install com.github.bilelmoussaoui.Authenticator.json --force-clean
